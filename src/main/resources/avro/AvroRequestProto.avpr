@@ -1,0 +1,47 @@
+{
+  "namespace": "com.noway.avro.client.proto",
+  "protocol": "AvroRequestProto",
+  "types": [
+    {
+      "name": "Message",
+      "type": "record",
+      "fields": [
+        {
+          "name": "requestName",
+          "type": "string"
+        },
+        {
+          "name": "orgId",
+          "type": "string"
+        },
+        {
+          "name": "appId",
+          "type": "string"
+        },
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "param",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "messages": {
+    "send": {
+      "request": [
+        {
+          "name": "message",
+          "type": "Message"
+        }
+      ],
+      "response": "string"
+    }
+  }
+}
