@@ -1,10 +1,10 @@
 package com.noway.avro.client.connect;
 
-import com.infogen.core.json.Return;
 import com.noway.avro.client.proto.AvroRequestProto;
 import com.noway.avro.client.proto.Message;
 import com.noway.avro.client.tools.CodeEnum;
 import com.noway.avro.client.tools.JsonConvert;
+import com.noway.avro.client.tools.Return;
 import org.apache.avro.ipc.NettyTransceiver;
 import org.apache.avro.ipc.specific.SpecificRequestor;
 import org.apache.commons.logging.Log;

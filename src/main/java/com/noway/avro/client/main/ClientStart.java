@@ -1,7 +1,5 @@
 package com.noway.avro.client.main;
 
-import com.James.Tools.Return;
-import com.infogen.core.json.Parameter;
 import com.noway.avro.client.connect.AvroRpcClient;
 import com.noway.avro.client.proto.Message;
 import com.noway.avro.client.proto.TestObject;
@@ -10,7 +8,6 @@ import org.apache.avro.AvroRemoteException;
 import org.apache.avro.util.Utf8;
 
 import java.io.IOException;
-import java.util.Map;
 
 /**
  * Created by ziqing.chen
