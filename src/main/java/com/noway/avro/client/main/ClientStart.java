@@ -1,12 +1,16 @@
 package com.noway.avro.client.main;
 
+import com.James.Tools.Return;
 import com.infogen.core.json.Parameter;
 import com.noway.avro.client.connect.AvroRpcClient;
 import com.noway.avro.client.proto.Message;
+import com.noway.avro.client.proto.TestObject;
+import com.noway.avro.client.tools.JsonConvert;
 import org.apache.avro.AvroRemoteException;
 import org.apache.avro.util.Utf8;
 
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created by ziqing.chen
@@ -25,6 +29,9 @@ public class ClientStart {
         try {
             String response = AvroRpcClient.getInstance().sendRequest( "127.0.0.1", 40012, message );
             System.out.println( "接受到请求返回" + response );
+            TestObject res = JsonConvert.toObject( response, TestObject.class );
+            System.out.println( res.getData() );
+            System.out.println( "id : " + res.getData().get( "id" ));
         } catch ( AvroRemoteException e ) {
             e.printStackTrace();
             //			logger.error( "调用" + message.getRequestName() + "接口异常", e );
